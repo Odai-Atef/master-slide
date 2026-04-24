@@ -13,8 +13,8 @@
     .deck { position:relative; width:100vw; height:100vh; }
     .slide { position:absolute; inset:0; padding:44px 56px 56px; background:linear-gradient(135deg,#f9fcff 0%,#eef7fd 100%); display:flex; flex-direction:column; opacity:0; transform:translateX(60px) scale(.98); pointer-events:none; transition:opacity .55s ease, transform .55s ease; overflow:hidden; }
     .slide.active { opacity:1; transform:translateX(0) scale(1); pointer-events:auto; }
-    .logo-wrap { position:absolute; top:28px; right:42px; width:160px; display:flex; justify-content:flex-end; }
-    .logo-wrap img { width:150px; height:auto; object-fit:contain; }
+    .logo-wrap { position:absolute; top:0; right:0; width:230px; height:102px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%); border-bottom-left-radius:28px; box-shadow:0 12px 28px rgba(15,23,42,.20); z-index:5; }
+    .logo-wrap img { width:150px; height:auto; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,.18)); }
     .slide-head { display:flex; gap:20px; align-items:center; margin-top:18px; margin-bottom:28px; }
     .icon-circle { width:72px; height:72px; border-radius:22px; background:linear-gradient(135deg,var(--accent),#65c9ff); color:white; display:grid; place-items:center; font-size:30px; box-shadow:0 14px 30px rgba(21,169,245,.28); flex:0 0 auto; }
     .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:12px; margin-bottom:6px; }
@@ -159,7 +159,7 @@
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
   <div class="title-card fade-up">
-    <div class="chip">Master Thesis Presentation</div>
+    <div class="chip">Project/Master Thesis Presentation</div>
     <h1>Interactive Social Media Federated Recommendation System via Chrome Extension</h1>
     <p class="lead">Prepared by Odai Atef Atiya Abdelbaky</p>
     <p>Master of Science in Artificial Intelligence, College of Informatics, Midocean University</p>
