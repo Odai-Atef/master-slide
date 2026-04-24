@@ -50,9 +50,9 @@
     .fade-up { opacity:0; transform:translateY(24px); transition:all .65s ease; }
     .slide.active .fade-up { opacity:1; transform:translateY(0); }
     .slide.active .delay-1 { transition-delay:.12s; }
-    .controls { position:fixed; left:50%; bottom:18px; transform:translateX(-50%); display:flex; gap:10px; z-index:20; }
-    .controls button { border:none; background:rgba(255,255,255,.88); color:#123; width:46px; height:46px; border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,.15); cursor:pointer; font-size:18px; }
     .progress { position:fixed; left:0; top:0; height:5px; background:linear-gradient(90deg,var(--accent),#73d0ff); width:0; z-index:30; transition:width .4s ease; }
+    .controls { position:fixed; left:50%; bottom:18px; transform:translateX(-50%); display:flex; gap:10px; z-index:20; }
+    .controls button { border:none; background:rgba(255,255,255,0.01); color:#123; width:30px; height:30px; border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,.08); cursor:pointer; font-size:12px; }
 
     .image-slide { justify-content:flex-start; }
     .image-frame { margin-top:18px; width:100%; height:calc(100vh - 180px); display:flex; align-items:center; justify-content:center; }
@@ -86,6 +86,69 @@
     .objectives-slide .objective-card { background:#fff; border-radius:22px; padding:18px 16px 20px; box-shadow:var(--shadow); text-align:center; min-height:290px; }
     .objectives-slide .objective-dot { width:58px; height:58px; margin:0 auto 18px; border-radius:999px; background:linear-gradient(135deg,var(--accent),#78d2ff); color:#fff; display:grid; place-items:center; font-size:24px; border:6px solid #eef9ff; position:relative; z-index:2; }
     .objectives-slide .objective-card p { margin:0; font-size:17px; line-height:1.55; text-align:left; }
+
+    .chapter-slide .chapter-list { margin-top:22px; display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; gap:14px; }
+    .chapter-slide .chapter-item { background:#fff; border-radius:22px; padding:18px 16px; box-shadow:var(--shadow); min-height:250px; border-bottom:6px solid #8fd7fb; }
+    .chapter-slide .chapter-item:nth-child(2){ border-bottom-color:#a9b8ff; }
+    .chapter-slide .chapter-item:nth-child(3){ border-bottom-color:#78d3c6; }
+    .chapter-slide .chapter-item:nth-child(4){ border-bottom-color:#ffc46b; }
+    .chapter-slide .chapter-item:nth-child(5){ border-bottom-color:#f59ab6; }
+    .chapter-slide .chapter-item .chapter-no { font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:8px; }
+    .chapter-slide .chapter-item p { margin:0; font-size:18px; line-height:1.5; }
+    .compare-slide .compare-grid { margin-top:24px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .compare-slide .compare-card { background:#fff; border-radius:26px; padding:24px; box-shadow:var(--shadow); min-height:360px; }
+    .compare-slide .compare-card h3 { margin:0 0 16px; font-size:24px; color:#10263a; }
+    .compare-slide .compare-card ul { gap:16px; }
+    .compare-slide .compare-card li { font-size:20px; }
+    .stack-slide .stack-grid { margin-top:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .stack-slide .stack-card { background:#fff; border-radius:24px; padding:22px; box-shadow:var(--shadow); min-height:280px; }
+    .stack-slide .stack-card .stack-icon { width:54px; height:54px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7ad4ff); color:#fff; font-size:24px; margin-bottom:14px; }
+    .stack-slide .stack-card h3 { margin:0 0 10px; font-size:22px; }
+    .stack-slide .stack-card p { margin:0; font-size:18px; line-height:1.55; }
+    .metric-slide .metric-grid { margin-top:22px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .metric-slide .metric-card { background:#fff; border-radius:24px; padding:20px 18px; box-shadow:var(--shadow); min-height:240px; }
+    .metric-slide .metric-icon { width:52px; height:52px; border-radius:16px; display:grid; place-items:center; background:#eef9ff; color:var(--accent); font-size:23px; margin-bottom:14px; }
+    .metric-slide .metric-card p { margin:0; font-size:18px; line-height:1.55; }
+    .spec-slide .spec-grid { margin-top:22px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .spec-slide .spec-card { background:#fff; border-radius:24px; padding:20px 22px; box-shadow:var(--shadow); min-height:135px; display:flex; gap:16px; align-items:flex-start; }
+    .spec-slide .spec-icon { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:22px; flex:0 0 auto; }
+    .spec-slide .spec-card p { margin:0; font-size:18px; line-height:1.5; }
+    .config-slide .config-grid { margin-top:22px; display:grid; grid-template-columns:1.15fr .85fr; gap:20px; }
+    .config-slide .config-panel { background:#fff; border-radius:24px; padding:22px; box-shadow:var(--shadow); min-height:360px; }
+    .config-slide .config-list { display:grid; gap:16px; }
+    .config-slide .config-row { display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid #ebf4fa; }
+    .config-slide .config-row:last-child { border-bottom:none; }
+    .config-slide .config-badge { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:18px; flex:0 0 auto; }
+    .config-slide .config-row p { margin:0; font-size:18px; line-height:1.5; }
+    .summary-slide .summary-grid { margin-top:24px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .summary-slide .summary-card { background:#fff; border-radius:26px; padding:24px 22px; box-shadow:var(--shadow); min-height:280px; }
+    .summary-slide .summary-card .summary-icon { width:54px; height:54px; border-radius:18px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7ad4ff); color:#fff; font-size:24px; margin-bottom:16px; }
+    .summary-slide .summary-card p { margin:0; font-size:18px; line-height:1.55; }
+
+    .model-slide .model-layout { margin-top:22px; display:grid; grid-template-columns:1.15fr .85fr; gap:22px; }
+    .model-slide .model-main, .model-slide .model-side { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:24px; }
+    .model-slide .model-hero { display:flex; gap:16px; align-items:center; margin-bottom:18px; padding-bottom:18px; border-bottom:1px solid #ebf4fa; }
+    .model-slide .model-hero-icon { width:64px; height:64px; border-radius:20px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#76d3ff); color:#fff; font-size:28px; flex:0 0 auto; }
+    .model-slide .model-hero p { margin:0; font-size:19px; line-height:1.5; }
+    .model-slide .param-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px; }
+    .model-slide .param-card { background:linear-gradient(180deg,#f5fbff,#ffffff); border:1px solid #dceff9; border-radius:22px; padding:18px; min-height:140px; }
+    .model-slide .param-card .param-label { font-size:12px; font-weight:800; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:10px; }
+    .model-slide .param-card p { margin:0; font-size:18px; line-height:1.5; }
+    .model-slide .side-note { display:flex; gap:14px; align-items:flex-start; padding:16px 0; border-bottom:1px solid #ebf4fa; }
+    .model-slide .side-note:last-child { border-bottom:none; }
+    .model-slide .side-icon { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:20px; flex:0 0 auto; }
+    .model-slide .side-note p { margin:0; font-size:18px; line-height:1.5; }
+
+    .insight-slide .insight-layout { margin-top:24px; display:grid; grid-template-columns:1.1fr .9fr; gap:22px; }
+    .insight-slide .insight-main, .insight-slide .insight-side { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:24px; }
+    .insight-slide .insight-main { position:relative; overflow:hidden; }
+    .insight-slide .insight-main:before { content:''; position:absolute; left:0; top:0; bottom:0; width:8px; background:linear-gradient(180deg,var(--accent),#79d1ff); }
+    .insight-slide .insight-point { display:flex; gap:16px; align-items:flex-start; padding:14px 0; border-bottom:1px solid #ebf4fa; }
+    .insight-slide .insight-point:last-child { border-bottom:none; }
+    .insight-slide .insight-icon { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:21px; flex:0 0 auto; }
+    .insight-slide .insight-point p, .insight-slide .insight-side p { margin:0; font-size:18px; line-height:1.55; }
+    .insight-slide .insight-side { display:flex; flex-direction:column; justify-content:center; background:linear-gradient(180deg,#ffffff,#f4fbff); }
+    .insight-slide .insight-side .big-icon { width:74px; height:74px; border-radius:22px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7bd3ff); color:#fff; font-size:30px; margin-bottom:18px; }
   </style>
 </head>
 <body>
@@ -252,122 +315,74 @@
 </section>
 
 
-<section class="slide content-slide" data-slide="6">
+<section class="slide summary-slide" data-slide="6">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-award"></i></div>
-    <div>
-      <div class="eyebrow">Slide 06</div>
-      <h2>Thesis Contribution</h2>
-    </div>
+    <div><div class="eyebrow">Slide 06</div><h2>Thesis Contribution</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>This thesis describes a user-centered and privacy-preserving recommendation framework through the implementation of a Chrome extension.</li><li>The proposed system enables users to provide an explicit recommended or unwanted label to social media posts.</li><li>This creates a clearer and more transparent preference model than typical implicit-feedback approaches.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Low-Rank Adaptation (LoRA) enables efficient model adaptation on a user device without collecting large amounts of centralized data.</li>
-      </ul>
-    </div>
+  <div class="summary-grid fade-up delay-1">
+    <div class="summary-card"><div class="summary-icon"><i class="fa-brands fa-chrome"></i></div><p>This thesis describes a user-centered and privacy-preserving recommendation framework through the implementation of a Chrome extension.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-tags"></i></div><p>The proposed system enables users to provide an explicit recommended or unwanted label to social media posts. This creates a clearer and more transparent preference model than typical implicit-feedback approaches.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-microchip"></i></div><p>Low-Rank Adaptation (LoRA) enables efficient model adaptation on a user device without collecting large amounts of centralized data.</p></div>
   </div>
   <div class="pagination">06 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="7">
+<section class="slide chapter-slide" data-slide="7">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-list-check"></i></div>
-    <div>
-      <div class="eyebrow">Slide 07</div>
-      <h2>Thesis Organization</h2>
-    </div>
+    <div><div class="eyebrow">Slide 07</div><h2>Thesis Organization</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>Chapter 1 introduces the research problem, objectives, and contributions.</li><li>Chapter 2 reviews recommender systems, social media personalization, browser-based interventions, and LoRA.</li><li>Chapter 3 presents the architecture, data collection process, backend API, and database design.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Chapter 4 describes experiments, datasets, evaluation, and results.</li><li>Chapter 5 summarizes the findings and future directions.</li>
-      </ul>
-    </div>
+  <div class="chapter-list fade-up delay-1">
+    <div class="chapter-item"><div class="chapter-no">Chapter 1</div><p>Chapter 1 introduces the research problem, objectives, and contributions.</p></div>
+    <div class="chapter-item"><div class="chapter-no">Chapter 2</div><p>Chapter 2 reviews recommender systems, social media personalization, browser-based interventions, and LoRA.</p></div>
+    <div class="chapter-item"><div class="chapter-no">Chapter 3</div><p>Chapter 3 presents the architecture, data collection process, backend API, and database design.</p></div>
+    <div class="chapter-item"><div class="chapter-no">Chapter 4</div><p>Chapter 4 describes experiments, datasets, evaluation, and results.</p></div>
+    <div class="chapter-item"><div class="chapter-no">Chapter 5</div><p>Chapter 5 summarizes the findings and future directions.</p></div>
   </div>
   <div class="pagination">07 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="8">
+<section class="slide compare-slide" data-slide="8">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-book-open"></i></div>
-    <div>
-      <div class="eyebrow">Slide 08</div>
-      <h2>Background and Related Work</h2>
-    </div>
+    <div><div class="eyebrow">Slide 08</div><h2>Background and Related Work</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>Prior work shows that conventional recommender systems suffer from scalability issues, cold start problems, and sparse feedback.</li><li>Browser-based reranking research shows that extension-based intervention can support practical and ecologically valid experiments.</li><li>LoRA has been established as a valid way of adapting large pre-trained models with much lower computational cost.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Federated recommendation literature highlights the balance between personalization, privacy, efficiency, and scalability.</li>
-      </ul>
-    </div>
+  <div class="compare-grid fade-up delay-1">
+    <div class="compare-card"><h3>Prior Findings</h3><ul><li>Prior work shows that conventional recommender systems suffer from scalability issues, cold start problems, and sparse feedback.</li><li>Browser-based reranking research shows that extension-based intervention can support practical and ecologically valid experiments.</li></ul></div>
+    <div class="compare-card"><h3>Research Direction</h3><ul><li>LoRA has been established as a valid way of adapting large pre-trained models with much lower computational cost.</li><li>Federated recommendation literature highlights the balance between personalization, privacy, efficiency, and scalability.</li></ul></div>
   </div>
   <div class="pagination">08 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="9">
+<section class="slide stack-slide" data-slide="9">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-diagram-project"></i></div>
-    <div>
-      <div class="eyebrow">Slide 09</div>
-      <h2>Proposed Methodology</h2>
-    </div>
+    <div><div class="eyebrow">Slide 09</div><h2>Proposed Methodology</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The proposed interactive recommendation system uses explicit user feedback through classifications of recommended and unwanted traffic.</li><li>The framework has three major components: a Chrome extension, a backend application, and a MySQL database.</li><li>The Chrome extension identifies visible posts, extracts relevant content, and provides a straightforward annotation interface.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>The system captures explicit preference signals that can later be used to create personalized recommendations and filtered content.</li>
-      </ul>
-    </div>
+  <div class="stack-grid fade-up delay-1">
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-hand-pointer"></i></div><h3>Explicit Feedback</h3><p>The proposed interactive recommendation system uses explicit user feedback through classifications of recommended and unwanted traffic.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-cubes"></i></div><h3>Core Components</h3><p>The framework has three major components: a Chrome extension, a backend application, and a MySQL database.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-brands fa-chrome"></i></div><h3>Extension Interface</h3><p>The Chrome extension identifies visible posts, extracts relevant content, and provides a straightforward annotation interface. The system captures explicit preference signals that can later be used to create personalized recommendations and filtered content.</p></div>
   </div>
   <div class="pagination">09 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="10">
+<section class="slide metric-slide" data-slide="10">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-database"></i></div>
-    <div>
-      <div class="eyebrow">Slide 10</div>
-      <h2>Data Flow and Label Collection</h2>
-    </div>
+    <div><div class="eyebrow">Slide 10</div><h2>Data Flow and Label Collection</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>Each time a user labels a post, the extension pulls relevant text snippets and metadata from the interface.</li><li>This data includes the content of posts, platform source, a local identifier, the assigned label, and interaction time.</li><li>After a user labels the post, the extension sends those records to a back end API.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>The back end validates and processes the records, then stores them in MySQL.</li>
-      </ul>
-    </div>
+  <div class="metric-grid fade-up delay-1">
+    <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-tags"></i></div><p>Each time a user labels a post, the extension pulls relevant text snippets and metadata from the interface.</p></div>
+    <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-file-lines"></i></div><p>This data includes the content of posts, platform source, a local identifier, the assigned label, and interaction time.</p></div>
+    <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-server"></i></div><p>After a user labels the post, the extension sends those records to a back end API.</p></div>
+    <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-database"></i></div><p>The back end validates and processes the records, then stores them in MySQL.</p></div>
   </div>
   <div class="pagination">10 / 22</div>
 </section>
@@ -389,194 +404,159 @@
 </section>
 
 
-<section class="slide content-slide" data-slide="12">
+
+<section class="slide insight-slide" data-slide="12">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-hand-pointer"></i></div>
-    <div>
-      <div class="eyebrow">Slide 12</div>
-      <h2>Why Explicit Interaction Matters</h2>
-    </div>
+    <div><div class="eyebrow">Slide 12</div><h2>Why Explicit Interaction Matters</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>One significant advantage of this methodology is the identification of explicit user interaction as the means of producing data.</li><li>This gives more transparency because users are familiar with how the data they provide is generated and used.</li><li>It also enhances data quality because the data is derived from intentional and interpretable feedback.</li>
-      </ul>
+  <div class="insight-layout fade-up delay-1">
+    <div class="insight-main">
+      <div class="insight-point">
+        <div class="insight-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+        <p>One significant advantage of this methodology is the identification of explicit user interaction as the means of producing data.</p>
+      </div>
+      <div class="insight-point">
+        <div class="insight-icon"><i class="fa-solid fa-eye"></i></div>
+        <p>This gives more transparency because users are familiar with how the data they provide is generated and used.</p>
+      </div>
+      <div class="insight-point">
+        <div class="insight-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <p>It also enhances data quality because the data is derived from intentional and interpretable feedback.</p>
+      </div>
     </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Cross-platform functionality allows a more versatile and comprehensive profile of user preference to be developed.</li>
-      </ul>
+    <div class="insight-side">
+      <div class="big-icon"><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
+      <p>Cross-platform functionality allows a more versatile and comprehensive profile of user preference to be developed.</p>
     </div>
   </div>
   <div class="pagination">12 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="13">
+
+<section class="slide stack-slide" data-slide="13">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
-    <div>
-      <div class="eyebrow">Slide 13</div>
-      <h2>Role of LoRA in the System</h2>
-    </div>
+    <div><div class="eyebrow">Slide 13</div><h2>Role of LoRA in the System</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>This approach includes an artificial intelligence component defined by the technique of Low-Rank Adaptation (LoRA).</li><li>By collecting labeled posts through the Chrome extension, a supervised dataset becomes available for training or adapting a recommendation model.</li><li>LoRA provides an efficient means of fine-tuning compared to retraining a large language or text model.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>This reduces computational resource requirements and development time for personalized recommendations.</li>
-      </ul>
-    </div>
+  <div class="stack-grid fade-up delay-1">
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-brain"></i></div><h3>AI Component</h3><p>This approach includes an artificial intelligence component defined by the technique of Low-Rank Adaptation (LoRA).</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-table"></i></div><h3>Training Data</h3><p>By collecting labeled posts through the Chrome extension, a supervised dataset becomes available for training or adapting a recommendation model.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-gauge-high"></i></div><h3>Efficiency</h3><p>LoRA provides an efficient means of fine-tuning compared to retraining a large language or text model. This reduces computational resource requirements and development time for personalized recommendations.</p></div>
   </div>
   <div class="pagination">13 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="14">
+<section class="slide summary-slide" data-slide="14">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
-    <div>
-      <div class="eyebrow">Slide 14</div>
-      <h2>Experimental Results and Discussion</h2>
-    </div>
+    <div><div class="eyebrow">Slide 14</div><h2>Experimental Results and Discussion</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The system was evaluated by examining both model performance and the correct integration of Model, Backend, and Browser.</li><li>Social media posts were classified into two target classes: recommended and unwanted.</li><li>Downloaded datasets from Kaggle and ChatGPT-generated user behavior scenarios were used for testing and experimentation.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>The output was designed to provide recommendation scores, not only hard class labels.</li>
-      </ul>
-    </div>
+  <div class="summary-grid fade-up delay-1">
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-puzzle-piece"></i></div><p>The system was evaluated by examining both model performance and the correct integration of Model, Backend, and Browser.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-filter-circle-check"></i></div><p>Social media posts were classified into two target classes: recommended and unwanted. Downloaded datasets from Kaggle and ChatGPT-generated user behavior scenarios were used for testing and experimentation.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-ranking-star"></i></div><p>The output was designed to provide recommendation scores, not only hard class labels.</p></div>
   </div>
   <div class="pagination">14 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="15">
+<section class="slide stack-slide" data-slide="15">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-flask"></i></div>
-    <div>
-      <div class="eyebrow">Slide 15</div>
-      <h2>Experimental Setup</h2>
-    </div>
+    <div><div class="eyebrow">Slide 15</div><h2>Experimental Setup</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The environment consisted of a backend API for training and inference, an interactive browser extension, and a machine learning pipeline using LoRA-based personalization.</li><li>The aim was to create a complete end-to-end recommendation workflow instead of a single isolated classification model.</li><li>This setup allowed evaluation of the integrated system under realistic conditions.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        
-      </ul>
-    </div>
+  <div class="stack-grid fade-up delay-1">
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-server"></i></div><h3>Backend API</h3><p>The environment consisted of a backend API for training and inference, an interactive browser extension, and a machine learning pipeline using LoRA-based personalization.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-link"></i></div><h3>End-to-End Workflow</h3><p>The aim was to create a complete end-to-end recommendation workflow instead of a single isolated classification model.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-vial-circle-check"></i></div><h3>Realistic Evaluation</h3><p>This setup allowed evaluation of the integrated system under realistic conditions.</p></div>
   </div>
   <div class="pagination">15 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="16">
+<section class="slide spec-slide" data-slide="16">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-computer"></i></div>
-    <div>
-      <div class="eyebrow">Slide 16</div>
-      <h2>Hardware Setup</h2>
-    </div>
+    <div><div class="eyebrow">Slide 16</div><h2>Hardware Setup</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>CPU: Apple M4 Pro RAM: 24 GB Operating System: MacOS Tahoe Python Version: 3.9.6 Node.js Version: 24.13.1 Browser for Extension Testing: Google Chrome V146.0.7680.178.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        
-      </ul>
-    </div>
+  <div class="spec-grid fade-up delay-1">
+    <div class="spec-card"><div class="spec-icon"><i class="fa-solid fa-microchip"></i></div><p>CPU: Apple M4 Pro</p></div>
+    <div class="spec-card"><div class="spec-icon"><i class="fa-solid fa-memory"></i></div><p>RAM: 24 GB</p></div>
+    <div class="spec-card"><div class="spec-icon"><i class="fa-solid fa-laptop"></i></div><p>Operating System: MacOS Tahoe</p></div>
+    <div class="spec-card"><div class="spec-icon"><i class="fa-brands fa-python"></i></div><p>Python Version: 3.9.6</p></div>
+    <div class="spec-card"><div class="spec-icon"><i class="fa-brands fa-node-js"></i></div><p>Node.js Version: 24.13.1</p></div>
+    <div class="spec-card"><div class="spec-icon"><i class="fa-brands fa-chrome"></i></div><p>Browser for Extension Testing: Google Chrome V146.0.7680.178</p></div>
   </div>
   <div class="pagination">16 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="17">
+<section class="slide stack-slide" data-slide="17">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-layer-group"></i></div>
-    <div>
-      <div class="eyebrow">Slide 17</div>
-      <h2>Software Stack</h2>
-    </div>
+    <div><div class="eyebrow">Slide 17</div><h2>Software Stack</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The backend framework is FastAPI with Uvicorn API runtime server and Python.</li><li>Machine learning libraries include PyTorch, Transformers, PEFT, Datasets, Scikit-learn, NumPy, Pandas, and Accelerate.</li><li>The backend also uses JWT authentication, passlib for password security, SQLAlchemy, and MySQL via PyMySQL.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>The extension uses Manifest V3, JavaScript, popup-based interaction, content scripts, and chrome.storage.local.</li>
-      </ul>
-    </div>
+  <div class="stack-grid fade-up delay-1">
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-server"></i></div><h3>Backend Stack</h3><p>The backend framework is FastAPI with Uvicorn API runtime server and Python.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-brain"></i></div><h3>Machine Learning Stack</h3><p>Machine learning libraries include PyTorch, Transformers, PEFT, Datasets, Scikit-learn, NumPy, Pandas, and Accelerate.</p></div>
+    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-shield"></i></div><h3>Security and Extension</h3><p>The backend also uses JWT authentication, passlib for password security, SQLAlchemy, and MySQL via PyMySQL. The extension uses Manifest V3, JavaScript, popup-based interaction, content scripts, and chrome.storage.local.</p></div>
   </div>
   <div class="pagination">17 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="18">
+
+<section class="slide model-slide" data-slide="18">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-sliders"></i></div>
-    <div>
-      <div class="eyebrow">Slide 18</div>
-      <h2>Configuration of the Model</h2>
-    </div>
+    <div><div class="eyebrow">Slide 18</div><h2>Configuration of the Model</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>A transformer-based sequence classification model with Low-Rank Adaptation (LoRA) was used.</li><li>Base model name: xlm-roberta-base.</li><li>Training defaults: 3 epochs, batch size 8, learning rate 0.0002, and maximum sequence length 256.</li>
-      </ul>
+  <div class="model-layout fade-up delay-1">
+    <div class="model-main">
+      <div class="model-hero">
+        <div class="model-hero-icon"><i class="fa-solid fa-robot"></i></div>
+        <p>A transformer-based sequence classification model with Low-Rank Adaptation (LoRA) was used. Base model name: xlm-roberta-base.</p>
+      </div>
+      <div class="param-grid">
+        <div class="param-card">
+          <div class="param-label">Training Defaults</div>
+          <p>Training defaults: 3 epochs, batch size 8, learning rate 0.0002, and maximum sequence length 256.</p>
+        </div>
+        <div class="param-card">
+          <div class="param-label">Dataset Limits</div>
+          <p>Minimum samples for training: 20. Maximum posts used at a time: 1000.</p>
+        </div>
+      </div>
     </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Minimum samples for training: 20.</li><li>Maximum posts used at a time: 1000.</li><li>User-specific adapter directories allow each user to train and use a separate LoRA adapter.</li>
-      </ul>
+    <div class="model-side">
+      <div class="side-note">
+        <div class="side-icon"><i class="fa-solid fa-folder-tree"></i></div>
+        <p>User-specific adapter directories allow each user to train and use a separate LoRA adapter.</p>
+      </div>
+      <div class="side-note">
+        <div class="side-icon"><i class="fa-solid fa-microchip"></i></div>
+        <p>A transformer-based sequence classification model with Low-Rank Adaptation (LoRA) was used.</p>
+      </div>
     </div>
   </div>
   <div class="pagination">18 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="19">
+
+<section class="slide summary-slide" data-slide="19">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-language"></i></div>
-    <div>
-      <div class="eyebrow">Slide 19</div>
-      <h2>Language and Data Preparation</h2>
-    </div>
+    <div><div class="eyebrow">Slide 19</div><h2>Language and Data Preparation</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The application was designed to support the Arabic language.</li><li>ChatGPT was used during the experimental preparation phase to help simulate user preferences and behavior scenarios.</li><li>Posts were collected from Kaggle and categorized into Recommended vs Unwanted.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Content categories included entertainment, sports, news, fashion and style, food and cooking, travel, home and decor, relationships, marketing, entrepreneurship, career advice, and industry insights.</li>
-      </ul>
-    </div>
+  <div class="summary-grid fade-up delay-1">
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-language"></i></div><p>The application was designed to support the Arabic language.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-comments"></i></div><p>ChatGPT was used during the experimental preparation phase to help simulate user preferences and behavior scenarios. Posts were collected from Kaggle and categorized into Recommended vs Unwanted.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-layer-group"></i></div><p>Content categories included entertainment, sports, news, fashion and style, food and cooking, travel, home and decor, relationships, marketing, entrepreneurship, career advice, and industry insights.</p></div>
   </div>
   <div class="pagination">19 / 22</div>
 </section>
@@ -598,26 +578,16 @@
 </section>
 
 
-<section class="slide content-slide" data-slide="21">
+<section class="slide summary-slide" data-slide="21">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-flag-checkered"></i></div>
-    <div>
-      <div class="eyebrow">Slide 21</div>
-      <h2>Conclusion and Future Work</h2>
-    </div>
+    <div><div class="eyebrow">Slide 21</div><h2>Conclusion and Future Work</h2></div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The recommendation framework can surface relevant posts and deprioritize unwanted content.</li><li>It provides a transparent alternative to conventional opaque recommendation models.</li><li>The work combines explicit feedback, lightweight learning, and cross-platform functionality.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Future work can strengthen personalization quality, privacy safeguards, and broader deployment.</li>
-      </ul>
-    </div>
+  <div class="summary-grid fade-up delay-1">
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-star"></i></div><p>The recommendation framework can surface relevant posts and deprioritize unwanted content. It provides a transparent alternative to conventional opaque recommendation models.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-feather-pointed"></i></div><p>The work combines explicit feedback, lightweight learning, and cross-platform functionality.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-forward"></i></div><p>Future work can strengthen personalization quality, privacy safeguards, and broader deployment.</p></div>
   </div>
   <div class="pagination">21 / 22</div>
 </section>
@@ -668,6 +638,11 @@
     });
     const match = location.hash.match(/slide-(\d+)/);
     showSlide(match ? Number(match[1]) - 1 : 0);
+    window.addEventListener('load', () => {
+      document.body.setAttribute('tabindex', '0');
+      document.body.focus();
+    });
+    document.addEventListener('click', () => document.body.focus());
   </script>
 </body>
 </html>
