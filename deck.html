@@ -57,6 +57,35 @@
     .image-slide { justify-content:flex-start; }
     .image-frame { margin-top:18px; width:100%; height:calc(100vh - 180px); display:flex; align-items:center; justify-content:center; }
     .image-frame img { max-width:100%; max-height:100%; object-fit:contain; border-radius:22px; box-shadow:var(--shadow); background:#fff; }
+
+    .path-slide .path-wrap { margin-top:18px; display:grid; grid-template-columns:1.1fr 90px 1.1fr 90px 1.1fr 90px 1.1fr; gap:10px; align-items:center; }
+    .path-slide .path-card { background:#fff; border:1px solid rgba(21,169,245,.10); border-radius:24px; padding:22px 18px; box-shadow:var(--shadow); min-height:250px; display:flex; flex-direction:column; justify-content:flex-start; }
+    .path-slide .path-card .mini-icon { width:54px; height:54px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#71d1ff); color:#fff; font-size:22px; margin-bottom:16px; }
+    .path-slide .path-card h3 { margin:0 0 10px; font-size:22px; color:#10263a; }
+    .path-slide .path-card p { margin:0; font-size:18px; line-height:1.5; }
+    .path-slide .path-arrow { display:grid; place-items:center; font-size:38px; color:#78b7e2; font-weight:800; }
+    .path-slide .path-note { margin-top:18px; background:linear-gradient(90deg,#e9f7ff,#f8fcff); border-left:5px solid var(--accent); padding:16px 18px; border-radius:16px; color:#28485f; font-size:19px; font-weight:600; }
+
+    .problem-slide .problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:18px; }
+    .problem-slide .problem-item { background:#fff; border-radius:24px; padding:22px; box-shadow:var(--shadow); border-top:6px solid #ff9f7a; min-height:170px; }
+    .problem-slide .problem-item:nth-child(2) { border-top-color:#f59e0b; }
+    .problem-slide .problem-item:nth-child(3) { border-top-color:#f97316; }
+    .problem-slide .problem-item:nth-child(4) { border-top-color:#fb7185; }
+    .problem-slide .problem-item .problem-icon { width:50px; height:50px; border-radius:14px; display:grid; place-items:center; background:#fff3ee; color:#f97316; font-size:22px; margin-bottom:14px; }
+    .problem-slide .problem-item p { margin:0; font-size:19px; line-height:1.5; color:#334155; }
+    .solution-slide .solution-stage { margin-top:24px; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .solution-slide .solution-card { background:linear-gradient(180deg,#ffffff,#f3fbff); border:1px solid rgba(21,169,245,.10); border-radius:26px; padding:24px 20px; box-shadow:var(--shadow); position:relative; min-height:290px; }
+    .solution-slide .solution-card:after { content:''; position:absolute; top:38px; right:-18px; width:36px; height:4px; background:#89cef3; }
+    .solution-slide .solution-card:last-child:after { display:none; }
+    .solution-slide .solution-num { font-size:13px; font-weight:800; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:10px; }
+    .solution-slide .solution-icon { width:56px; height:56px; border-radius:18px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#71d1ff); color:#fff; font-size:24px; margin-bottom:14px; }
+    .solution-slide .solution-card p { margin:0; font-size:18px; line-height:1.55; }
+    .objectives-slide .objective-roadmap { position:relative; margin-top:26px; padding-top:20px; }
+    .objectives-slide .objective-line { position:absolute; left:6%; right:6%; top:74px; height:6px; background:linear-gradient(90deg,#bfeaff,#7ecff4); border-radius:999px; }
+    .objectives-slide .objective-points { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; position:relative; }
+    .objectives-slide .objective-card { background:#fff; border-radius:22px; padding:18px 16px 20px; box-shadow:var(--shadow); text-align:center; min-height:290px; }
+    .objectives-slide .objective-dot { width:58px; height:58px; margin:0 auto 18px; border-radius:999px; background:linear-gradient(135deg,var(--accent),#78d2ff); color:#fff; display:grid; place-items:center; font-size:24px; border:6px solid #eef9ff; position:relative; z-index:2; }
+    .objectives-slide .objective-card p { margin:0; font-size:17px; line-height:1.55; text-align:left; }
   </style>
 </head>
 <body>
@@ -76,7 +105,8 @@
   <div class="pagination">01 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="2">
+
+<section class="slide path-slide" data-slide="2">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-lightbulb"></i></div>
@@ -85,22 +115,38 @@
       <h2>Abstract Overview</h2>
     </div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>Social media sites create abundant, ever-growing flows of information.</li><li>Current recommendation systems mostly rely on passive behavioral signals such as likes, clicks, scrolling behavior, and dwell time.</li><li>These systems lack transparency, limit user autonomy, and offer little information about the actual reasoning behind recommendations.</li>
-      </ul>
+  <div class="path-wrap fade-up delay-1">
+    <div class="path-card">
+      <div class="mini-icon"><i class="fa-solid fa-globe"></i></div>
+      <h3>Massive Content Flow</h3>
+      <p>Social media platforms generate huge and continuously growing streams of information.</p>
     </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>This project showcases an alternative, user-directed recommendation framework delivered as a Chrome extension.</li>
-      </ul>
+    <div class="path-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="path-card">
+      <div class="mini-icon"><i class="fa-solid fa-computer-mouse"></i></div>
+      <h3>Passive Signals</h3>
+      <p>Most recommender systems depend on clicks, scrolling, likes, and dwell time.</p>
+    </div>
+    <div class="path-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="path-card">
+      <div class="mini-icon"><i class="fa-solid fa-eye-slash"></i></div>
+      <h3>Opaque Decisions</h3>
+      <p>Users often cannot understand why content is recommended, reducing trust and control.</p>
+    </div>
+    <div class="path-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="path-card">
+      <div class="mini-icon"><i class="fa-brands fa-chrome"></i></div>
+      <h3>User-Directed Alternative</h3>
+      <p>This thesis proposes a Chrome extension that gives users explicit influence over recommendations.</p>
     </div>
   </div>
+  <div class="path-note fade-up delay-1"><i class="fa-solid fa-route"></i> The idea moves from information overload, to passive recommendation problems, to a transparent user-controlled framework.</div>
   <div class="pagination">02 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="3">
+
+
+<section class="slide problem-slide" data-slide="3">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-triangle-exclamation"></i></div>
@@ -109,22 +155,30 @@
       <h2>Problem Definition</h2>
     </div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>The primary method for inferring user preferences is to use implicit behavioral signals, but these signals tend to be noisy and easily misinterpreted.</li><li>Most mainstream recommendation algorithms are opaque, so users are less likely to trust the algorithm and correct undesired patterns.</li><li>Most systems optimize engagement for the platform instead of the goals of users.</li>
-      </ul>
+  <div class="problem-grid fade-up delay-1">
+    <div class="problem-item">
+      <div class="problem-icon"><i class="fa-solid fa-wave-square"></i></div>
+      <p>The primary method for inferring user preferences is to use implicit behavioral signals, but these signals tend to be noisy and easily misinterpreted.</p>
     </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Most personalization models require extensive centralized tracking and restrict learned preference profiles to a single platform.</li>
-      </ul>
+    <div class="problem-item">
+      <div class="problem-icon"><i class="fa-solid fa-eye-slash"></i></div>
+      <p>Most mainstream recommendation algorithms are opaque, so users are less likely to trust the algorithm and correct undesired patterns.</p>
+    </div>
+    <div class="problem-item">
+      <div class="problem-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <p>Most systems optimize engagement for the platform instead of the goals of users.</p>
+    </div>
+    <div class="problem-item">
+      <div class="problem-icon"><i class="fa-solid fa-building-shield"></i></div>
+      <p>Most personalization models require extensive centralized tracking and restrict learned preference profiles to a single platform.</p>
     </div>
   </div>
   <div class="pagination">03 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="4">
+
+
+<section class="slide solution-slide" data-slide="4">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
@@ -133,22 +187,34 @@
       <h2>Proposed Solution</h2>
     </div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>This research project attempts to solve this issue via user-directed recommendations through a Chrome extension.</li><li>Users explicitly label posts as Recommended or Unwanted, creating clear preference datasets.</li><li>A lightweight model that runs locally on the user device learns from user-generated feedback.</li>
-      </ul>
+  <div class="solution-stage fade-up delay-1">
+    <div class="solution-card">
+      <div class="solution-num">Step 01</div>
+      <div class="solution-icon"><i class="fa-brands fa-chrome"></i></div>
+      <p>This research project attempts to solve this issue via user-directed recommendations through a Chrome extension.</p>
     </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>The proposed system aims to provide a more transparent, private, and less overwhelming experience for users.</li>
-      </ul>
+    <div class="solution-card">
+      <div class="solution-num">Step 02</div>
+      <div class="solution-icon"><i class="fa-solid fa-tags"></i></div>
+      <p>Users explicitly label posts as Recommended or Unwanted, creating clear preference datasets.</p>
+    </div>
+    <div class="solution-card">
+      <div class="solution-num">Step 03</div>
+      <div class="solution-icon"><i class="fa-solid fa-microchip"></i></div>
+      <p>A lightweight model that runs locally on the user device learns from user-generated feedback.</p>
+    </div>
+    <div class="solution-card">
+      <div class="solution-num">Step 04</div>
+      <div class="solution-icon"><i class="fa-solid fa-user-shield"></i></div>
+      <p>The proposed system aims to provide a more transparent, private, and less overwhelming experience for users.</p>
     </div>
   </div>
   <div class="pagination">04 / 22</div>
 </section>
 
-<section class="slide content-slide" data-slide="5">
+
+
+<section class="slide objectives-slide" data-slide="5">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-bullseye"></i></div>
@@ -157,20 +223,34 @@
       <h2>Thesis Objectives</h2>
     </div>
   </div>
-  <div class="content-grid fade-up delay-1">
-    <div class="bullet-card">
-      <ul>
-        <li>Develop a Chrome extension capable of overlaying annotation buttons on social media posts within supported platforms.</li><li>Collect labeled feedback from users to create a personalized training dataset reflecting individual content preferences.</li><li>Train and optimize a recommendation model that learns from these annotations to predict which future posts should be highlighted or hidden.</li>
-      </ul>
-    </div>
-    <div class="bullet-card alt">
-      <ul>
-        <li>Implement local or lightweight model training to preserve user privacy and minimize data transfer.</li><li>Evaluate the system using both quantitative and qualitative metrics.</li>
-      </ul>
+  <div class="objective-roadmap fade-up delay-1">
+    <div class="objective-line"></div>
+    <div class="objective-points">
+      <div class="objective-card">
+        <div class="objective-dot"><i class="fa-brands fa-chrome"></i></div>
+        <p>Develop a Chrome extension capable of overlaying annotation buttons on social media posts within supported platforms.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-dot"><i class="fa-solid fa-database"></i></div>
+        <p>Collect labeled feedback from users to create a personalized training dataset reflecting individual content preferences.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-dot"><i class="fa-solid fa-brain"></i></div>
+        <p>Train and optimize a recommendation model that learns from these annotations to predict which future posts should be highlighted or hidden.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-dot"><i class="fa-solid fa-shield-halved"></i></div>
+        <p>Implement local or lightweight model training to preserve user privacy and minimize data transfer.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-dot"><i class="fa-solid fa-chart-column"></i></div>
+        <p>Evaluate the system using both quantitative and qualitative metrics.</p>
+      </div>
     </div>
   </div>
   <div class="pagination">05 / 22</div>
 </section>
+
 
 <section class="slide content-slide" data-slide="6">
   <div class="logo-wrap"><img src="../logo.png" alt="University logo"></div>
