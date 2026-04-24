@@ -149,13 +149,37 @@
     .insight-slide .insight-point p, .insight-slide .insight-side p { margin:0; font-size:18px; line-height:1.55; }
     .insight-slide .insight-side { display:flex; flex-direction:column; justify-content:center; background:linear-gradient(180deg,#ffffff,#f4fbff); }
     .insight-slide .insight-side .big-icon { width:74px; height:74px; border-radius:22px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7bd3ff); color:#fff; font-size:30px; margin-bottom:18px; }
+    .platforms-slide .platform-grid { margin-top:24px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .platforms-slide .platform-card { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:28px 22px; min-height:280px; text-align:center; }
+    .platforms-slide .platform-card .platform-icon { width:76px; height:76px; border-radius:24px; display:grid; place-items:center; margin:0 auto 18px; background:linear-gradient(135deg,var(--accent),#7ad4ff); color:#fff; font-size:34px; }
+    .platforms-slide .platform-card h3 { margin:0 0 12px; font-size:24px; color:#10263a; }
+    .platforms-slide .platform-card p { margin:0; font-size:18px; line-height:1.55; }
+    .lora-slide .lora-layout { margin-top:24px; display:grid; grid-template-columns:1.05fr .95fr; gap:22px; }
+    .lora-slide .lora-main, .lora-slide .lora-side { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:24px; }
+    .lora-slide .lora-main p, .lora-slide .lora-side p { margin:0; font-size:18px; line-height:1.55; }
+    .lora-slide .lora-steps { display:grid; gap:16px; margin-top:18px; }
+    .lora-slide .lora-step { display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid #ebf4fa; }
+    .lora-slide .lora-step:last-child { border-bottom:none; }
+    .lora-slide .lora-badge { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:19px; flex:0 0 auto; }
+    .lora-visual-slide .lora-scene { margin-top:24px; display:grid; grid-template-columns:1.05fr .95fr; gap:22px; }
+    .lora-visual-slide .lora-story, .lora-visual-slide .lora-visual { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:24px; }
+    .lora-visual-slide .lora-intro { display:flex; gap:16px; align-items:flex-start; padding-bottom:18px; margin-bottom:18px; border-bottom:1px solid #ebf4fa; }
+    .lora-visual-slide .lora-intro-icon { width:62px; height:62px; border-radius:18px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7ad4ff); color:#fff; font-size:28px; flex:0 0 auto; }
+    .lora-visual-slide .lora-intro p, .lora-visual-slide .lora-node p { margin:0; font-size:18px; line-height:1.55; }
+    .lora-visual-slide .lora-flow { display:grid; gap:14px; }
+    .lora-visual-slide .lora-node { display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-bottom:1px solid #ebf4fa; }
+    .lora-visual-slide .lora-node:last-child { border-bottom:none; }
+    .lora-visual-slide .lora-node-icon { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:19px; flex:0 0 auto; }
+    .lora-visual-slide .lora-visual { display:flex; flex-direction:column; justify-content:center; background:linear-gradient(180deg,#ffffff,#f4fbff); }
+    .lora-visual-slide .lora-diagram { display:grid; gap:14px; }
+    .lora-visual-slide .lora-box { background:#fff; border:1px solid #dcedf8; border-radius:20px; padding:18px; text-align:center; font-size:18px; font-weight:700; color:#123; }
+    .lora-visual-slide .lora-arrow { text-align:center; font-size:26px; color:#78bde3; }
   </style>
 </head>
 <body>
   <div class="progress" id="progress"></div>
   <div class="deck" id="deck">
-    
-<section class="slide title-slide active" data-slide="1">
+    <section class="slide title-slide active" data-slide="1">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div>
   <div class="title-card fade-up">
@@ -165,9 +189,8 @@
     <p>Master of Science in Artificial Intelligence, College of Informatics, Midocean University</p>
     <p><strong>Supervisor:</strong> Dr. Ashraf Alsaed</p>
   </div>
-  <div class="pagination">01 / 22</div>
+  <div class="pagination">01 / 23</div>
 </section>
-
 
 <section class="slide path-slide" data-slide="2">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
@@ -204,10 +227,8 @@
     </div>
   </div>
   <div class="path-note fade-up delay-1"><i class="fa-solid fa-route"></i> The idea moves from information overload, to passive recommendation problems, to a transparent user-controlled framework.</div>
-  <div class="pagination">02 / 22</div>
+  <div class="pagination">02 / 23</div>
 </section>
-
-
 
 <section class="slide problem-slide" data-slide="3">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
@@ -236,10 +257,8 @@
       <p>Most personalization models require extensive centralized tracking and restrict learned preference profiles to a single platform.</p>
     </div>
   </div>
-  <div class="pagination">03 / 22</div>
+  <div class="pagination">03 / 23</div>
 </section>
-
-
 
 <section class="slide solution-slide" data-slide="4">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
@@ -272,10 +291,8 @@
       <p>The proposed system aims to provide a more transparent, private, and less overwhelming experience for users.</p>
     </div>
   </div>
-  <div class="pagination">04 / 22</div>
+  <div class="pagination">04 / 23</div>
 </section>
-
-
 
 <section class="slide objectives-slide" data-slide="5">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
@@ -311,9 +328,8 @@
       </div>
     </div>
   </div>
-  <div class="pagination">05 / 22</div>
+  <div class="pagination">05 / 23</div>
 </section>
-
 
 <section class="slide summary-slide" data-slide="6">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
@@ -326,7 +342,7 @@
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-tags"></i></div><p>The proposed system enables users to provide an explicit recommended or unwanted label to social media posts. This creates a clearer and more transparent preference model than typical implicit-feedback approaches.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-microchip"></i></div><p>Low-Rank Adaptation (LoRA) enables efficient model adaptation on a user device without collecting large amounts of centralized data.</p></div>
   </div>
-  <div class="pagination">06 / 22</div>
+  <div class="pagination">06 / 23</div>
 </section>
 
 <section class="slide chapter-slide" data-slide="7">
@@ -342,7 +358,7 @@
     <div class="chapter-item"><div class="chapter-no">Chapter 4</div><p>Chapter 4 describes experiments, datasets, evaluation, and results.</p></div>
     <div class="chapter-item"><div class="chapter-no">Chapter 5</div><p>Chapter 5 summarizes the findings and future directions.</p></div>
   </div>
-  <div class="pagination">07 / 22</div>
+  <div class="pagination">07 / 23</div>
 </section>
 
 <section class="slide compare-slide" data-slide="8">
@@ -355,7 +371,7 @@
     <div class="compare-card"><h3>Prior Findings</h3><ul><li>Prior work shows that conventional recommender systems suffer from scalability issues, cold start problems, and sparse feedback.</li><li>Browser-based reranking research shows that extension-based intervention can support practical and ecologically valid experiments.</li></ul></div>
     <div class="compare-card"><h3>Research Direction</h3><ul><li>LoRA has been established as a valid way of adapting large pre-trained models with much lower computational cost.</li><li>Federated recommendation literature highlights the balance between personalization, privacy, efficiency, and scalability.</li></ul></div>
   </div>
-  <div class="pagination">08 / 22</div>
+  <div class="pagination">08 / 23</div>
 </section>
 
 <section class="slide stack-slide" data-slide="9">
@@ -369,14 +385,28 @@
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-cubes"></i></div><h3>Core Components</h3><p>The framework has three major components: a Chrome extension, a backend application, and a MySQL database.</p></div>
     <div class="stack-card"><div class="stack-icon"><i class="fa-brands fa-chrome"></i></div><h3>Extension Interface</h3><p>The Chrome extension identifies visible posts, extracts relevant content, and provides a straightforward annotation interface. The system captures explicit preference signals that can later be used to create personalized recommendations and filtered content.</p></div>
   </div>
-  <div class="pagination">09 / 22</div>
+  <div class="pagination">09 / 23</div>
 </section>
 
-<section class="slide metric-slide" data-slide="10">
+<section class="slide platforms-slide" data-slide="10">
+  <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
+  <div class="slide-head fade-up">
+    <div class="icon-circle"><i class="fa-solid fa-share-nodes"></i></div>
+    <div><div class="eyebrow">Slide 10</div><h2>Supported Social Media Platforms</h2></div>
+  </div>
+  <div class="platform-grid fade-up delay-1">
+    <div class="platform-card"><div class="platform-icon"><i class="fa-brands fa-facebook-f"></i></div><h3>Facebook</h3><p>The extension is designed to work with Facebook posts and support explicit user feedback directly inside the platform interface.</p></div>
+    <div class="platform-card"><div class="platform-icon"><i class="fa-brands fa-linkedin-in"></i></div><h3>LinkedIn</h3><p>The extension can also be applied to LinkedIn content so the user can classify professional and informational posts based on personal preference.</p></div>
+    <div class="platform-card"><div class="platform-icon"><i class="fa-brands fa-x-twitter"></i></div><h3>X</h3><p>The same idea extends to X, allowing the user to label posts and build a more direct and transparent recommendation profile across platforms.</p></div>
+  </div>
+  <div class="pagination">10 / 23</div>
+</section>
+
+<section class="slide metric-slide" data-slide="11">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-database"></i></div>
-    <div><div class="eyebrow">Slide 10</div><h2>Data Flow and Label Collection</h2></div>
+    <div><div class="eyebrow">Slide 11</div><h2>Data Flow and Label Collection</h2></div>
   </div>
   <div class="metric-grid fade-up delay-1">
     <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-tags"></i></div><p>Each time a user labels a post, the extension pulls relevant text snippets and metadata from the interface.</p></div>
@@ -384,32 +414,29 @@
     <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-server"></i></div><p>After a user labels the post, the extension sends those records to a back end API.</p></div>
     <div class="metric-card"><div class="metric-icon"><i class="fa-solid fa-database"></i></div><p>The back end validates and processes the records, then stores them in MySQL.</p></div>
   </div>
-  <div class="pagination">10 / 22</div>
+  <div class="pagination">11 / 23</div>
 </section>
 
-
-<section class="slide image-slide" data-slide="11">
+<section class="slide image-slide" data-slide="12">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-sitemap"></i></div>
     <div>
-      <div class="eyebrow">Slide 11</div>
+      <div class="eyebrow">Slide 12</div>
       <h2>System Architecture</h2>
     </div>
   </div>
   <div class="image-frame fade-up delay-1">
     <img src="11.png" alt="System architecture diagram">
   </div>
-  <div class="pagination">11 / 22</div>
+  <div class="pagination">12 / 23</div>
 </section>
 
-
-
-<section class="slide insight-slide" data-slide="12">
+<section class="slide insight-slide" data-slide="13">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-hand-pointer"></i></div>
-    <div><div class="eyebrow">Slide 12</div><h2>Why Explicit Interaction Matters</h2></div>
+    <div><div class="eyebrow">Slide 13</div><h2>Why Explicit Interaction Matters</h2></div>
   </div>
   <div class="insight-layout fade-up delay-1">
     <div class="insight-main">
@@ -431,57 +458,75 @@
       <p>Cross-platform functionality allows a more versatile and comprehensive profile of user preference to be developed.</p>
     </div>
   </div>
-  <div class="pagination">12 / 22</div>
+  <div class="pagination">13 / 23</div>
 </section>
 
 
-<section class="slide stack-slide" data-slide="13">
+<section class="slide lora-visual-slide" data-slide="14">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
-    <div><div class="eyebrow">Slide 13</div><h2>Role of LoRA in the System</h2></div>
+    <div><div class="eyebrow">Slide 14</div><h2>LoRA Technique in the System</h2></div>
   </div>
-  <div class="stack-grid fade-up delay-1">
-    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-brain"></i></div><h3>AI Component</h3><p>This approach includes an artificial intelligence component defined by the technique of Low-Rank Adaptation (LoRA).</p></div>
-    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-table"></i></div><h3>Training Data</h3><p>By collecting labeled posts through the Chrome extension, a supervised dataset becomes available for training or adapting a recommendation model.</p></div>
-    <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-gauge-high"></i></div><h3>Efficiency</h3><p>LoRA provides an efficient means of fine-tuning compared to retraining a large language or text model. This reduces computational resource requirements and development time for personalized recommendations.</p></div>
+  <div class="lora-scene fade-up delay-1">
+    <div class="lora-story">
+      <div class="lora-intro">
+        <div class="lora-intro-icon"><i class="fa-solid fa-brain"></i></div>
+        <p>This approach includes an artificial intelligence component defined by the technique of Low-Rank Adaptation (LoRA).</p>
+      </div>
+      <div class="lora-flow">
+        <div class="lora-node"><div class="lora-node-icon"><i class="fa-solid fa-table"></i></div><p>By collecting labeled posts through the Chrome extension, a supervised dataset becomes available for training or adapting a recommendation model.</p></div>
+        <div class="lora-node"><div class="lora-node-icon"><i class="fa-solid fa-gauge-high"></i></div><p>LoRA provides an efficient means of fine-tuning compared to retraining a large language or text model.</p></div>
+        <div class="lora-node"><div class="lora-node-icon"><i class="fa-solid fa-clock"></i></div><p>This reduces computational resource requirements and development time for personalized recommendations.</p></div>
+      </div>
+    </div>
+    <div class="lora-visual">
+      <div class="lora-diagram">
+        <div class="lora-box">Labeled Posts from Chrome Extension</div>
+        <div class="lora-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="lora-box">LoRA-based Adaptation</div>
+        <div class="lora-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+        <div class="lora-box">Lightweight Personalized Recommendation</div>
+      </div>
+    </div>
   </div>
-  <div class="pagination">13 / 22</div>
+  <div class="pagination">14 / 23</div>
 </section>
 
-<section class="slide summary-slide" data-slide="14">
+
+<section class="slide summary-slide" data-slide="15">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
-    <div><div class="eyebrow">Slide 14</div><h2>Experimental Results and Discussion</h2></div>
+    <div><div class="eyebrow">Slide 15</div><h2>Experimental Results and Discussion</h2></div>
   </div>
   <div class="summary-grid fade-up delay-1">
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-puzzle-piece"></i></div><p>The system was evaluated by examining both model performance and the correct integration of Model, Backend, and Browser.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-filter"></i></div><p>Social media posts were classified into two target classes: recommended and unwanted. Downloaded datasets from Kaggle and ChatGPT-generated user behavior scenarios were used for testing and experimentation.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-star-half-stroke"></i></div><p>The output was designed to provide recommendation scores, not only hard class labels.</p></div>
   </div>
-  <div class="pagination">14 / 22</div>
+  <div class="pagination">15 / 23</div>
 </section>
 
-<section class="slide stack-slide" data-slide="15">
+<section class="slide stack-slide" data-slide="16">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-flask"></i></div>
-    <div><div class="eyebrow">Slide 15</div><h2>Experimental Setup</h2></div>
+    <div><div class="eyebrow">Slide 16</div><h2>Experimental Setup</h2></div>
   </div>
   <div class="stack-grid fade-up delay-1">
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-server"></i></div><h3>Backend API</h3><p>The environment consisted of a backend API for training and inference, an interactive browser extension, and a machine learning pipeline using LoRA-based personalization.</p></div>
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-link"></i></div><h3>End-to-End Workflow</h3><p>The aim was to create a complete end-to-end recommendation workflow instead of a single isolated classification model.</p></div>
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-vial-circle-check"></i></div><h3>Realistic Evaluation</h3><p>This setup allowed evaluation of the integrated system under realistic conditions.</p></div>
   </div>
-  <div class="pagination">15 / 22</div>
+  <div class="pagination">16 / 23</div>
 </section>
 
-<section class="slide spec-slide" data-slide="16">
+<section class="slide spec-slide" data-slide="17">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-computer"></i></div>
-    <div><div class="eyebrow">Slide 16</div><h2>Hardware Setup</h2></div>
+    <div><div class="eyebrow">Slide 17</div><h2>Hardware Setup</h2></div>
   </div>
   <div class="spec-grid fade-up delay-1">
     <div class="spec-card"><div class="spec-icon"><i class="fa-solid fa-microchip"></i></div><p>CPU: Apple M4 Pro</p></div>
@@ -491,29 +536,28 @@
     <div class="spec-card"><div class="spec-icon"><i class="fa-brands fa-node-js"></i></div><p>Node.js Version: 24.13.1</p></div>
     <div class="spec-card"><div class="spec-icon"><i class="fa-brands fa-chrome"></i></div><p>Browser for Extension Testing: Google Chrome V146.0.7680.178</p></div>
   </div>
-  <div class="pagination">16 / 22</div>
+  <div class="pagination">17 / 23</div>
 </section>
 
-<section class="slide stack-slide" data-slide="17">
+<section class="slide stack-slide" data-slide="18">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-layer-group"></i></div>
-    <div><div class="eyebrow">Slide 17</div><h2>Software Stack</h2></div>
+    <div><div class="eyebrow">Slide 18</div><h2>Software Stack</h2></div>
   </div>
   <div class="stack-grid fade-up delay-1">
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-server"></i></div><h3>Backend Stack</h3><p>The backend framework is FastAPI with Uvicorn API runtime server and Python.</p></div>
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-brain"></i></div><h3>Machine Learning Stack</h3><p>Machine learning libraries include PyTorch, Transformers, PEFT, Datasets, Scikit-learn, NumPy, Pandas, and Accelerate.</p></div>
     <div class="stack-card"><div class="stack-icon"><i class="fa-solid fa-shield"></i></div><h3>Security and Extension</h3><p>The backend also uses JWT authentication, passlib for password security, SQLAlchemy, and MySQL via PyMySQL. The extension uses Manifest V3, JavaScript, popup-based interaction, content scripts, and chrome.storage.local.</p></div>
   </div>
-  <div class="pagination">17 / 22</div>
+  <div class="pagination">18 / 23</div>
 </section>
 
-
-<section class="slide model-slide" data-slide="18">
+<section class="slide model-slide" data-slide="19">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-sliders"></i></div>
-    <div><div class="eyebrow">Slide 18</div><h2>Configuration of the Model</h2></div>
+    <div><div class="eyebrow">Slide 19</div><h2>Configuration of the Model</h2></div>
   </div>
   <div class="model-layout fade-up delay-1">
     <div class="model-main">
@@ -543,56 +587,53 @@
       </div>
     </div>
   </div>
-  <div class="pagination">18 / 22</div>
+  <div class="pagination">19 / 23</div>
 </section>
 
-
-<section class="slide summary-slide" data-slide="19">
+<section class="slide summary-slide" data-slide="20">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-language"></i></div>
-    <div><div class="eyebrow">Slide 19</div><h2>Language and Data Preparation</h2></div>
+    <div><div class="eyebrow">Slide 20</div><h2>Language and Data Preparation</h2></div>
   </div>
   <div class="summary-grid fade-up delay-1">
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-language"></i></div><p>The application was designed to support the Arabic language.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-comments"></i></div><p>ChatGPT was used during the experimental preparation phase to help simulate user preferences and behavior scenarios. Posts were collected from Kaggle and categorized into Recommended vs Unwanted.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-layer-group"></i></div><p>Content categories included entertainment, sports, news, fashion and style, food and cooking, travel, home and decor, relationships, marketing, entrepreneurship, career advice, and industry insights.</p></div>
   </div>
-  <div class="pagination">19 / 22</div>
+  <div class="pagination">20 / 23</div>
 </section>
 
-
-<section class="slide image-slide" data-slide="20">
+<section class="slide image-slide" data-slide="21">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-arrows-spin"></i></div>
     <div>
-      <div class="eyebrow">Slide 20</div>
+      <div class="eyebrow">Slide 21</div>
       <h2>Data Flow Between Platform, Backend, and MySQL</h2>
     </div>
   </div>
   <div class="image-frame fade-up delay-1">
     <img src="20.png" alt="Data flow diagram">
   </div>
-  <div class="pagination">20 / 22</div>
+  <div class="pagination">21 / 23</div>
 </section>
 
-
-<section class="slide summary-slide" data-slide="21">
+<section class="slide summary-slide" data-slide="22">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-flag-checkered"></i></div>
-    <div><div class="eyebrow">Slide 21</div><h2>Conclusion and Future Work</h2></div>
+    <div><div class="eyebrow">Slide 22</div><h2>Conclusion and Future Work</h2></div>
   </div>
   <div class="summary-grid fade-up delay-1">
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-star"></i></div><p>The recommendation framework can surface relevant posts and deprioritize unwanted content. It provides a transparent alternative to conventional opaque recommendation models.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-feather-pointed"></i></div><p>The work combines explicit feedback, lightweight learning, and cross-platform functionality.</p></div>
     <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-forward"></i></div><p>Future work can strengthen personalization quality, privacy safeguards, and broader deployment.</p></div>
   </div>
-  <div class="pagination">21 / 22</div>
+  <div class="pagination">22 / 23</div>
 </section>
 
-<section class="slide closing-slide" data-slide="22">
+<section class="slide closing-slide" data-slide="23">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="bg-orb orb-3"></div>
   <div class="slide-head fade-up">
@@ -610,9 +651,8 @@
   </div>
   <p class="presenter">Presenter: Odai Abdelbaky</p>
   <div class="thanks">Thank you</div>
-  <div class="pagination">22 / 22</div>
+  <div class="pagination">23 / 23</div>
 </section>
-
   </div>
   <div class="controls">
     <button id="prev" aria-label="Previous slide"><i class="fa-solid fa-arrow-left"></i></button>
