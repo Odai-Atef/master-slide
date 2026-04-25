@@ -125,6 +125,25 @@
     .summary-slide .summary-card { background:#fff; border-radius:26px; padding:24px 22px; box-shadow:var(--shadow); min-height:280px; }
     .summary-slide .summary-card .summary-icon { width:54px; height:54px; border-radius:18px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7ad4ff); color:#fff; font-size:24px; margin-bottom:16px; }
     .summary-slide .summary-card p { margin:0; font-size:18px; line-height:1.55; }
+    .results-slide .results-layout { margin-top:24px; display:grid; grid-template-columns:1.05fr .95fr; gap:22px; }
+    .results-slide .results-panel, .results-slide .matrix-panel { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:24px; }
+    .results-slide .results-panel { display:grid; gap:18px; }
+    .results-slide .result-card { background:linear-gradient(180deg,#f5fbff,#ffffff); border:1px solid #dceff9; border-radius:24px; padding:22px; }
+    .results-slide .result-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; gap:16px; }
+    .results-slide .result-head h3 { margin:0; font-size:24px; color:#10263a; }
+    .results-slide .result-badge { padding:8px 14px; border-radius:999px; background:#e8f7ff; color:#0b7fbe; font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .results-slide .metric-row { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .results-slide .metric-pill { background:#fff; border:1px solid #e5f1f8; border-radius:18px; padding:14px 12px; text-align:center; }
+    .results-slide .metric-pill strong { display:block; font-size:13px; color:var(--accent); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+    .results-slide .metric-pill span { font-size:26px; font-weight:800; color:#10263a; }
+    .results-slide .matrix-panel { display:grid; gap:18px; background:linear-gradient(180deg,#ffffff,#f4fbff); }
+    .results-slide .matrix-block { border:1px solid #dceff9; border-radius:24px; padding:20px; background:#fff; }
+    .results-slide .matrix-block h3 { margin:0 0 14px; font-size:22px; color:#10263a; }
+    .results-slide .matrix-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .results-slide .matrix-cell { border-radius:18px; padding:16px 14px; background:#f8fbfe; border:1px solid #e6f1f7; }
+    .results-slide .matrix-cell strong { display:block; font-size:13px; color:var(--accent); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+    .results-slide .matrix-cell span { font-size:24px; font-weight:800; color:#10263a; }
+    .results-slide .matrix-note { margin-top:12px; font-size:16px; color:#486275; }
 
     .model-slide .model-layout { margin-top:22px; display:grid; grid-template-columns:1.15fr .85fr; gap:22px; }
     .model-slide .model-main, .model-slide .model-side { background:#fff; border-radius:28px; box-shadow:var(--shadow); padding:24px; }
@@ -591,18 +610,61 @@
   <div class="pagination">19 / 23</div>
 </section>
 
-<section class="slide summary-slide" data-slide="20">
+<section class="slide results-slide" data-slide="20">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
-    <div class="icon-circle"><i class="fa-solid fa-language"></i></div>
-    <div><div class="eyebrow">Slide 20</div><h2>Language and Data Preparation</h2></div>
+    <div class="icon-circle"><i class="fa-solid fa-chart-column"></i></div>
+    <div><div class="eyebrow">Slide 20</div><h2>Model Results</h2></div>
   </div>
-  <div class="summary-grid fade-up delay-1">
-    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-language"></i></div><p>The application was designed to support the Arabic language.</p></div>
-    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-comments"></i></div><p>ChatGPT was used during the experimental preparation phase to help simulate user preferences and behavior scenarios. Posts were collected from Kaggle and categorized into Recommended vs Unwanted.</p></div>
-    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-layer-group"></i></div><p>Content categories included entertainment, sports, news, fashion and style, food and cooking, travel, home and decor, relationships, marketing, entrepreneurship, career advice, and industry insights.</p></div>
+  <div class="results-layout fade-up delay-1">
+    <div class="results-panel">
+      <div class="result-card">
+        <div class="result-head">
+          <h3>Experiment 1</h3>
+          <div class="result-badge">182 Posts</div>
+        </div>
+        <div class="metric-row">
+          <div class="metric-pill"><strong>Accuracy</strong><span>87.0%</span></div>
+          <div class="metric-pill"><strong>Precision</strong><span>80.0%</span></div>
+          <div class="metric-pill"><strong>Recall</strong><span>100%</span></div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="result-head">
+          <h3>Experiment 2</h3>
+          <div class="result-badge">1000 Posts</div>
+        </div>
+        <div class="metric-row">
+          <div class="metric-pill"><strong>Accuracy</strong><span>86.3%</span></div>
+          <div class="metric-pill"><strong>Precision</strong><span>97.4%</span></div>
+          <div class="metric-pill"><strong>Recall</strong><span>75.0%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="matrix-panel">
+      <div class="matrix-block">
+        <h3>Confusion Matrix, 182 Posts</h3>
+        <div class="matrix-grid">
+          <div class="matrix-cell"><strong>TN</strong><span>18</span></div>
+          <div class="matrix-cell"><strong>FP</strong><span>7</span></div>
+          <div class="matrix-cell"><strong>FN</strong><span>0</span></div>
+          <div class="matrix-cell"><strong>TP</strong><span>29</span></div>
+        </div>
+        <div class="matrix-note">Labels: unwanted, recommended</div>
+      </div>
+      <div class="matrix-block">
+        <h3>Confusion Matrix, 1000 Posts</h3>
+        <div class="matrix-grid">
+          <div class="matrix-cell"><strong>TN</strong><span>145</span></div>
+          <div class="matrix-cell"><strong>FP</strong><span>3</span></div>
+          <div class="matrix-cell"><strong>FN</strong><span>38</span></div>
+          <div class="matrix-cell"><strong>TP</strong><span>114</span></div>
+        </div>
+        <div class="matrix-note">Labels: unwanted, recommended</div>
+      </div>
+    </div>
   </div>
-  <div class="pagination">20 / 23</div>
+  <div class="pagination">20 / 22</div>
 </section>
 
 <section class="slide summary-slide" data-slide="21">
