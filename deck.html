@@ -121,6 +121,7 @@
     .config-slide .config-badge { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#eef8ff; color:var(--accent); font-size:18px; flex:0 0 auto; }
     .config-slide .config-row p { margin:0; font-size:18px; line-height:1.5; }
     .summary-slide .summary-grid { margin-top:24px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .summary-slide .summary-grid.two-per-row { grid-template-columns:repeat(2,1fr); }
     .summary-slide .summary-card { background:#fff; border-radius:26px; padding:24px 22px; box-shadow:var(--shadow); min-height:280px; }
     .summary-slide .summary-card .summary-icon { width:54px; height:54px; border-radius:18px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#7ad4ff); color:#fff; font-size:24px; margin-bottom:16px; }
     .summary-slide .summary-card p { margin:0; font-size:18px; line-height:1.55; }
@@ -604,36 +605,22 @@
   <div class="pagination">20 / 23</div>
 </section>
 
-<section class="slide image-slide" data-slide="21">
-  <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
-  <div class="slide-head fade-up">
-    <div class="icon-circle"><i class="fa-solid fa-arrows-spin"></i></div>
-    <div>
-      <div class="eyebrow">Slide 21</div>
-      <h2>Data Flow Between Platform, Backend, and MySQL</h2>
-    </div>
-  </div>
-  <div class="image-frame fade-up delay-1">
-    <img src="20.png" alt="Data flow diagram">
-  </div>
-  <div class="pagination">21 / 23</div>
-</section>
-
-<section class="slide summary-slide" data-slide="22">
+<section class="slide summary-slide" data-slide="21">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="slide-head fade-up">
     <div class="icon-circle"><i class="fa-solid fa-flag-checkered"></i></div>
-    <div><div class="eyebrow">Slide 22</div><h2>Conclusion and Future Work</h2></div>
+    <div><div class="eyebrow">Slide 21</div><h2>Conclusion and Future Work</h2></div>
   </div>
-  <div class="summary-grid fade-up delay-1">
-    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-star"></i></div><p>The recommendation framework can surface relevant posts and deprioritize unwanted content. It provides a transparent alternative to conventional opaque recommendation models.</p></div>
-    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-feather-pointed"></i></div><p>The work combines explicit feedback, lightweight learning, and cross-platform functionality.</p></div>
-    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-forward"></i></div><p>Future work can strengthen personalization quality, privacy safeguards, and broader deployment.</p></div>
+  <div class="summary-grid two-per-row fade-up delay-1">
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-star"></i></div><p>The recommendation framework can surface relevant posts and deprioritize unwanted content, providing a transparent alternative to conventional opaque recommendation models.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-sliders"></i></div><p>Future work can improve model performance by tuning LoRA parameters and refining the training configuration for stronger personalization quality.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-brands fa-tiktok"></i></div><p>The solution can be expanded beyond the current environment to additional social media platforms such as TikTok and Instagram.</p></div>
+    <div class="summary-card"><div class="summary-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div><p>A cloud deployment with autoscaling infrastructure can support larger workloads, improve availability, and make the system ready for broader real-world use.</p></div>
   </div>
-  <div class="pagination">22 / 23</div>
+  <div class="pagination">21 / 22</div>
 </section>
 
-<section class="slide closing-slide" data-slide="23">
+<section class="slide closing-slide" data-slide="22">
   <div class="logo-wrap"><img src="./logo.png" alt="University logo"></div>
   <div class="bg-orb orb-3"></div>
   <div class="slide-head fade-up">
@@ -651,7 +638,7 @@
   </div>
   <p class="presenter">Presenter: Odai Abdelbaky</p>
   <div class="thanks">Thank you</div>
-  <div class="pagination">23 / 23</div>
+  <div class="pagination">22 / 22</div>
 </section>
   </div>
   <div class="controls">
